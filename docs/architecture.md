@@ -63,7 +63,7 @@ Below are diagrams illustrating how **OpenCaptcha** processes incoming requests 
                    | (Pull image)
                    v
 +-----------------------------------------+
-|  Azure Container Instances (Windows)    |
+|  Azure Container Apps                   |
 +-----------------------------------------+
                    |
                    v
@@ -76,7 +76,7 @@ Below are diagrams illustrating how **OpenCaptcha** processes incoming requests 
 1. **Developers** push code changes or open pull requests on GitHub.
 2. **GitHub Actions** (CI/CD service) automatically runs tests and builds a Docker image.
 3. The image is **pushed** to **Azure Container Registry (ACR)**.
-4. **Azure Container Instances** (Windows-based) **pulls** the Docker image from ACR.
+4. **Azure Container Apps** **pulls** the Docker image from ACR.
 5. The container is **deployed** and made publicly available at `api.opencaptcha.io`.
 
 ---
