@@ -62,7 +62,34 @@ curl -X 'POST' \
 
 ---
 
-## Step 3: Adjust Your Parameters
+## Step 3: Create a CAPTCHA in a different color
+
+Use the `theme` object to change CAPTCHA colors.
+
+![Color CAPTCHA examples](../static/img/captcha_example_colors.gif)
+
+[![Try it out](https://img.shields.io/badge/-Try%20it%20out-brightgreen?style=for-the-badge)](https://hoppscotch.io/?method=POST&url=https%3A%2F%2Fapi.opencaptcha.io%2Fcaptcha&bodyMode=raw&contentType=application%2Fjson&rawParams=%7B%22text%22%3A%22hello%20world%22%2C%22theme%22%3A%7B%22primaryColor%22%3A%22%23ADD8E6%22%2C%22secondaryColor%22%3A%22%23FFFFFF%22%7D%7D)
+
+<details>
+<summary>View cURL request</summary>
+
+```bash
+curl -X 'POST' \
+  'https://api.opencaptcha.io/captcha' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "text": "hello world",
+    "theme": {
+      "primaryColor": "#ADD8E6",
+      "secondaryColor": "#FFFFFF"
+    }
+  }'
+````
+
+</details>
+```
+
+## Step 4: Adjust Your Parameters
 
 OpenCaptcha supports four main parameters: `text`, `width`, `height`, and `difficulty`. Here's how they work:
 
@@ -87,9 +114,23 @@ OpenCaptcha supports four main parameters: `text`, `width`, `height`, and `diffi
 
   If set to `null`, difficulty **1** is used.
 
+### (Optional): `theme`
+
+You can customize the CAPTCHA palette by passing a `theme` object. Provide 6‑digit hex colors like `#RRGGBB`.
+
+**`theme` object**
+
+| Field            | Type     | Required | Description                                                         |
+|------------------|----------|----------|---------------------------------------------------------------------|
+| `primaryColor`   | `string` | No       | Primary hex color (e.g., `#2E86AB`).                                |
+| `secondaryColor` | `string` | No       | Secondary hex color (e.g., `#FFFFFF`).                              |
+
+**Notes**
+- `theme` is optional; if omitted or individual fields are `null`, default colors are used.
+
 ---
 
-## Step 4: Understand the Responses
+## Step 5: Understand the Responses
 
 OpenCaptcha returns a **JPEG** image upon success, or an error status if something goes wrong:
 
