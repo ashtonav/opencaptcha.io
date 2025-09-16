@@ -84,10 +84,10 @@ curl -X 'POST' \
       "secondaryColor": "#FFFFFF"
     }
   }'
-````
+```
 
 </details>
-```
+---
 
 ## Step 4: Adjust Your Parameters
 
