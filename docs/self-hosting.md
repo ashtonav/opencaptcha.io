@@ -26,7 +26,7 @@ Before you begin, clone or download the [OpenCaptcha repository](https://github.
 ### Requirements
 - Visual Studio 2022
     - With ASP.NET and web development installed from the Visual Studio Installer
-- .NET 8 SDK
+- .NET 9 SDK
 
 ### How to Run
 1. Open the solution in Visual Studio 2022.

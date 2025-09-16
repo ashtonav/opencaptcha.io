@@ -5,6 +5,7 @@ sidebar_position: 5
 # Testing & Quality
 
 [![codecov](https://codecov.io/gh/ashtonav/opencaptcha/graph/badge.svg?token=ZD0L2LC2U0)](https://codecov.io/gh/ashtonav/opencaptcha)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ashtonav_opencaptcha&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=ashtonav_opencaptcha)
 [![.NET](https://github.com/ashtonav/opencaptcha/actions/workflows/dotnet.yml/badge.svg)](https://github.com/ashtonav/opencaptcha/actions/workflows/dotnet.yml)
 
 OpenCaptcha uses two main types of tests to ensure code quality:
