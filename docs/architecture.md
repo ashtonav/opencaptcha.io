@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # Architecture
 
-Below are diagrams illustrating how **OpenCaptcha** processes incoming requests and how it can be deployed via a CI/CD pipeline to Azure Container Instances.
+Below are diagrams illustrating how **OpenCaptcha** processes incoming requests and how it can be deployed via a CI/CD pipeline to Azure Container Apps.
 
 ---
 
