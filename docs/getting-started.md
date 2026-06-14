@@ -9,10 +9,24 @@ This page will guide you through generating your first CAPTCHA image.
 OpenCaptcha uses a single endpoint:
 
 ```
-POST https://api.opencaptcha.io/captcha
+https://api.opencaptcha.io/captcha
 ```
 
 By sending a POST request with some basic parameters, you can receive a custom CAPTCHA image in response.
+
+<details>
+<summary>Support for GET requests</summary>
+
+OpenCaptcha also supports using a GET request instead of a POST request:
+
+[![Try it out](https://img.shields.io/badge/-Try%20it%20out-brightgreen?style=for-the-badge)](https://hoppscotch.io/?method=GET&url=https%3A%2F%2Fapi.opencaptcha.io%2Fcaptcha&params=%5B%7B%22key%22%3A%22Text%22%2C%22value%22%3A%22captcha%22%7D%5D)
+```bash
+curl 'https://api.opencaptcha.io/captcha?Text=captcha'
+```
+
+All POST parameters are passed as query parameters (`Text`, `Width`, `Height`, `Difficulty`, `Theme.PrimaryColor`, `Theme.SecondaryColor`).
+
+</details>
 
 ---
 
